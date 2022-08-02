@@ -1,0 +1,111 @@
+<html>
+<head>
+
+
+<title>JavaScript</title>
+   
+       <p id = 'test'> Hello Hogi </p>
+       <p id = 'button'> Click here </p>
+      <img id= "image">
+      <button onclick="alert('Hello HOGI')">Click</button>
+        <br></br>
+       <script>
+         
+       //  <h1 onclick="this.innerHTML = eee"> clic</h1>
+          // document.getElementById("btn").innerHTML = "Hello Hogi";
+        //document.getElementById("test").innerHTML = "Hello Hogi";
+	  //  document.getElementById("image").src  = "logo3.png";
+		//document.getElementById("test").style.backgroundColor = "blue";
+        // la calculatrice, ajouter des evenements.. si je clique sur 1 afficher 1, 2 afficher 2
+       
+				
+	    function getnumber(number)
+		{
+			document.getElementById("digit").value+=number
+		}
+		
+		function clearAll()
+		{
+			document.getElementById("digit").value = ""
+			//document.getElementById("digit").reset;
+			 //document.getElementById('digit').innerHTML() = ""
+
+		}
+		
+		function calculate()
+		{
+			let x = document.getElementById("digit").value
+			let y = eval(x)
+			//document.getElementById('digit').innerHTML = 
+			document.getElementById("digit").value = y
+		}
+	</script>
+   
+   <!-- css -->   
+   <style type="text/css">
+		input[type="button"]
+		{
+		background-color:#01884B;
+		border: none;
+		padding: 10px 25px;
+		border-radius: 4px;
+		color: white;
+		width:100%
+		}
+		table {  
+         background-color: black;
+         }
+		
+		input[type="text"]
+		{
+		background-color:white;
+		border-radius: 4px;
+		padding: 10px 25px;
+		width:100%
+		}
+	</style>
+	
+</head>
+
+<body>
+	<!-- table -->  
+	<table >
+		<tr>
+			<td colspan="3"><input type="text" id="digit"/></td>
+			<td><input type="button" id="digit" value="c" onclick="clearAll()"/> </td>
+		
+		</tr>
+		<tr>
+			
+			<td><input type="button" value="1" onclick="getnumber(1)"/> </td>
+			<td><input type="button" value="2" onclick="getnumber(2)"/> </td>
+			<td><input type="button" value="3" onclick="getnumber(3)"/> </td>
+			<td><input type="button" value="/" onclick="getnumber('/')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="getnumber(4)"/> </td>
+			<td><input type="button" value="5" onclick="getnumber(5)"/> </td>
+			<td><input type="button" value="6" onclick="getnumber(6)"/> </td>
+			<td><input type="button" value="*" onclick="getnumber('*')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="getnumber(7)"/> </td>
+			<td><input type="button" value="8" onclick="getnumber(8)"/> </td>
+			<td><input type="button" value="9" onclick="getnumber(9)"/> </td>
+			<td><input type="button" value="-" onclick="getnumber('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" onclick="getnumber('0')"/> </td>
+			<td><input type="button" value="." onclick="getnumber('.')"/> </td>
+			<td><input type="button" value="=" onclick="calculate()"/> </td>
+			<td><input type="button" value="+" onclick="getnumber('+')"/> </td>
+		</tr>
+	</table>
+		
+		
+		
+		
+
+</body>
+
+</html>
